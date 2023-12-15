@@ -1,7 +1,12 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+
 function App() {
   return (
     <>
-      <h1>Test!</h1>
+      <button type="button" className="btn btn-primary">
+        Primary
+      </button>
     </>
   );
 }
