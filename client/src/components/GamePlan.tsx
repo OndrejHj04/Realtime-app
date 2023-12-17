@@ -1,33 +1,37 @@
 import styled from "styled-components";
+import Cell from "./Cell";
+
 const Container = styled.div`
-  flex: 1;
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
 `;
 
 const Plan = styled.div`
-  width: 500px;
-  height: 500px;
-  background-color: #ccc;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-`;
-
-const Cell = styled.div`
+  width: 80%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #fff;
+`;
+
+const Grid = styled.div`
+  width: 70vmin;
+  height: 70vmin;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 `;
 
 export default function GamePlan() {
   return (
     <Container>
       <Plan>
-        {Array.from({ length: 9 }).map(() => (
-          <Cell />
-        ))}
+        <Grid>
+          {Array.from({ length: 9 }).map((_, i) => (
+            <Cell index={i} />
+          ))}
+        </Grid>
       </Plan>
     </Container>
   );

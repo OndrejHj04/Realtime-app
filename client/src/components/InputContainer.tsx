@@ -12,6 +12,9 @@ const Input = styled.input`
   border-right: 0rem;
   border-radius: 1rem 0 0 1rem;
   font-size: 1.5rem;
+  @media (max-width: 576px) {
+    font-size: 1rem;
+  }
   text-align: center;
 `;
 
@@ -22,6 +25,9 @@ const Button = styled.button`
   cursor: pointer;
   border-radius: 0 1rem 1rem 0;
   border: 1px solid #ccc;
+  @media (max-width: 576px) {
+    font-size: 1rem;
+  }
   border-left: 0rem;
 `;
 
